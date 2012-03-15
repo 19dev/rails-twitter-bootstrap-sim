@@ -75,6 +75,17 @@ için (TODO/FIXME: ileride bunu STI da düzelteceğiz)
 	~$ git add .
 	~$ git commit -a -m pg-bundle
 
+`type` sütun ismi sorun çıkartmaya devam ediyor. Çözmek için geçici olarak
+rename ediyoruz,
+
+	~$ rails generate migration TypeColumnRename
+	~$ vim db/migrate/...type_column_rename.rb
+	def up
+		rename_column :question, :type, :qtype
+	end
+	~$ git add .
+	~$ git commit -a -m "migrate: type column rename"
+
 	~$ rails s --binding=192.168.140.214 --port=3003
 
 Github,
