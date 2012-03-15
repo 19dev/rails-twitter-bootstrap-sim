@@ -1,3 +1,13 @@
+# Siz ne yapacaksınız?
+
+Size düşen ise,
+
+	~$ git clone git@github.com:seyyah/rails-twitter-bootstrap-sim.git
+	~$ cd rails-twitter-bootstrap-sim
+	~$ bundle
+	~$ rake db:migrate
+	~$ rails s --binding=192.168.140.214 --port=3003
+
 # Nasıl?
 Kullanılan komutlar,
 
@@ -61,6 +71,10 @@ için (TODO/FIXME: ileride bunu STI da düzelteceğiz)
 	end
 	~$ git commit -a -m bugfix:sqlite3
 
+	~$ bundle
+	~$ git add .
+	~$ git commit -a -m pg-bundle
+
 	~$ rails s --binding=192.168.140.214 --port=3003
 
 Github,
@@ -73,6 +87,26 @@ Heroku,
 	~$ heroku create xlsim --stack cedar
 	~$ git push heroku master
 	~$ heroku run rake db:migrate
+
+# Ortam
+
+Versiyonlar şöyledir,
+
+	seyyah@ror:~$ rails -v
+	Rails 3.2.2
+	seyyah@ror:~$ ruby -v
+	ruby 1.9.3p0 (2011-10-30 revision 33570) [i486-linux]
+	seyyah@ror:~$ gem -v
+	1.8.11
+	seyyah@ror:~$
+
+# Twitter Bootstrap Demo
+
+Twitter Bootstrap can help make beautiful web apps quickly by providing you
+with useful CSS and JavaScript. Here you will learn how to include it into
+Rails with the twitter-bootstrap-rails gem.
+
+Kaynak: http://railscasts.com/episodes/328-twitter-bootstrap-basics
 
 # Kaynaklar
 
