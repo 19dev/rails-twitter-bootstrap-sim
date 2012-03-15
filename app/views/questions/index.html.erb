@@ -1,35 +1,26 @@
-<h1>Listing questions</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Type</th>
-    <th>Media</th>
-    <th>Description</th>
-    <th>Question</th>
-    <th>Options</th>
-    <th>Answer</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @questions.each do |question| %>
-  <tr>
-    <td><%= question.title %></td>
-    <td><%= question.type %></td>
-    <td><%= question.media %></td>
-    <td><%= question.description %></td>
-    <td><%= question.question %></td>
-    <td><%= question.options %></td>
-    <td><%= question.answer %></td>
-    <td><%= link_to 'Show', question %></td>
-    <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<h1>Questions</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.id %></td>
+        <td><%= link_to question.title, question_path(question) %></td>
+        <td><%= question.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', question_path(question), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Question', new_question_path %>
+<%= link_to 'New', new_question_path, :class => 'btn btn-primary' %>

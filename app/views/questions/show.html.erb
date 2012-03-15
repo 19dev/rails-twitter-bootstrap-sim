@@ -1,40 +1,42 @@
-<p id="notice"><%= notice %></p>
+<h1>Question</h1>
 
 <p>
-  <b>Title:</b>
+  <b>Title</b><br>
   <%= @question.title %>
 </p>
 
 <p>
-  <b>Type:</b>
+  <b>Type</b><br>
   <%= @question.type %>
 </p>
 
 <p>
-  <b>Media:</b>
+  <b>Media</b><br>
   <%= @question.media %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Description</b><br>
   <%= @question.description %>
 </p>
 
 <p>
-  <b>Question:</b>
+  <b>Question</b><br>
   <%= @question.question %>
 </p>
 
 <p>
-  <b>Options:</b>
+  <b>Options</b><br>
   <%= @question.options %>
 </p>
 
 <p>
-  <b>Answer:</b>
+  <b>Answer</b><br>
   <%= @question.answer %>
 </p>
 
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div class="form-actions">
+  <%= link_to 'Back', questions_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_question_path(@question), :class => 'btn' %>
+  <%= link_to 'Delete', question_path(@question), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
