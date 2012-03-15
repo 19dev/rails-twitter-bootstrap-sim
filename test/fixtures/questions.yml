@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  type: 
+  media: MyString
+  description: MyText
+  question: MyString
+  options: MyText
+  answer: MyString
+
+two:
+  title: MyString
+  type: 
+  media: MyString
+  description: MyText
+  question: MyString
+  options: MyText
+  answer: MyString
