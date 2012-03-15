@@ -1,39 +1,33 @@
 <h1>Question</h1>
-
-<p>
-  <b>Title</b><br>
-  <%= @question.title %>
-</p>
-
-<p>
-  <b>Type</b><br>
-  <%= @question.type %>
-</p>
-
-<p>
-  <b>Media</b><br>
-  <%= @question.media %>
-</p>
-
-<p>
-  <b>Description</b><br>
-  <%= @question.description %>
-</p>
-
-<p>
-  <b>Question</b><br>
-  <%= @question.question %>
-</p>
-
-<p>
-  <b>Options</b><br>
-  <%= @question.options %>
-</p>
-
-<p>
-  <b>Answer</b><br>
-  <%= @question.answer %>
-</p>
+<table class="table table-striped">
+  <tr>
+    <td>Title</td>
+    <td><%= @question.title %></td>
+  </tr>
+  <tr>
+    <td>Qtype</td>
+    <td><%= @question.qtype %></td>
+  </tr>
+  <tr>
+    <td>Media</td>
+    <td><%= @question.media %></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td><%= @question.description %></td>
+  </tr>
+  <tr>
+    <td>Question</td>
+    <td><%= @question.question %></td>
+  </tr>
+  <tr>
+    <td>Options</td>
+    <td><%= simple_format(line_break(@question.options)) %></td>
+  <tr>
+    <td>Answer</td>
+    <td><%= @question.answer %></td>
+  </tr>
+</table>
 
 <div class="form-actions">
   <%= link_to 'Back', questions_path, :class => 'btn'  %>

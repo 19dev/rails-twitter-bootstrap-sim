@@ -4,6 +4,7 @@
     <tr>
       <th>ID</th>
       <th>Title</th>
+      <th>Qtype</th>
       <th>Created at</th>
       <th>Actions</th>
     </tr>
@@ -13,6 +14,7 @@
       <tr>
         <td><%= question.id %></td>
         <td><%= link_to question.title, question_path(question) %></td>
+        <td><%= question.qtype %></td>
         <td><%= question.created_at %></td>
         <td>
           <%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %>
