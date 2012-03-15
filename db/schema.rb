@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315154005) do
+ActiveRecord::Schema.define(:version => 20120315164637) do
 
   create_table "questions", :force => true do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "qtype"
     t.string   "media"
     t.text     "description"
     t.string   "question"

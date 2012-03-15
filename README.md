@@ -81,7 +81,7 @@ rename ediyoruz,
 	~$ rails generate migration TypeColumnRename
 	~$ vim db/migrate/...type_column_rename.rb
 	def up
-		rename_column :question, :type, :qtype
+		rename_column :questions, :type, :qtype
 	end
 	~$ git add .
 	~$ git commit -a -m "migrate: type column rename"

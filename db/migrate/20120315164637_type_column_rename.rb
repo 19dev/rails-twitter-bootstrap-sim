@@ -1,6 +1,6 @@
 class TypeColumnRename < ActiveRecord::Migration
   def up
-    rename_column :question, :type, :qtype
+    rename_column :questions, :type, :qtype
   end
 
   def down
