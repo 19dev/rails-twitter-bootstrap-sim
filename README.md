@@ -52,6 +52,15 @@ için (TODO/FIXME: ileride bunu STI da düzelteceğiz)
 	end
 	~$ git commit -a -m model
 
+	~$ vim Gemfile
+	group :development, :test do
+		gem 'sqlite3'
+	end
+	group :production do
+		gem 'pg', '0.12.2'
+	end
+	~$ git commit -a -m bugfix:sqlite3
+
 	~$ rails s --binding=192.168.140.214 --port=3003
 
 Github,
