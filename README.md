@@ -8,6 +8,8 @@ Size düşen ise,
 	~$ rake db:migrate
 	~$ rails s --binding=192.168.140.214 --port=3003
 
+Test için, http://192.168.140.214:3003/questions
+
 # Nasıl?
 Kullanılan komutlar,
 
