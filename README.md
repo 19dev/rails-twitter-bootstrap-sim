@@ -3,7 +3,8 @@
 Size düşen ise,
 
 	~$ git clone git@github.com:seyyah/rails-twitter-bootstrap-sim.git
-	~$ cd rails-twitter-bootstrap-sim
+	~$ cd rails-twitter-bootstrap-sim/
+	~$ git checkout cancan/
 	~$ bundle
 	~$ rake db:migrate
 	~$ rails s --binding=192.168.140.214 --port=3003
