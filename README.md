@@ -14,6 +14,15 @@ Test için
 
 - yerelde: http://192.168.140.214:3003/login
 
+- herokuda: http://tbsim-v2.herokuapp.com/
+
+Seed edilen kullanıcılar (ad:parola yetki),
+
+        geek:secret         Read
+        moderator:secret    Read + Create
+        admin:secret        Read + Create + Update
+        superadmin:secret   Read + Create + Update + Destroy
+
 # Daha fazlası
 
 - twitter-bootstrap + questions: https://github.com/seyyah/rails-twitter-bootstrap-sim/blob/tbsim-v1/README.md
