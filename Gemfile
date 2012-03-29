@@ -8,6 +8,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'cancan'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
+gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
+gem "carrierwave"
+gem "mini_magick"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

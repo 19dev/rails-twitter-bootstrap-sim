@@ -1,4 +1,6 @@
 RailsTwitterBootstrapSim::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :sessions
   resources :questions
   get "login" => "sessions#new", :as => "login"
