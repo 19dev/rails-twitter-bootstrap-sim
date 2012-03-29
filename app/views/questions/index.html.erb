@@ -31,4 +31,6 @@
   </tbody>
 </table>
 
-<%= link_to 'New', new_question_path, :class => 'btn btn-primary' %>
+<% if can? :create, Question %>
+  <%= link_to 'New', new_question_path, :class => 'btn btn-primary' %>
+<% end %>
