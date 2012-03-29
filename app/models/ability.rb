@@ -8,7 +8,7 @@ class Ability
       can :read, Question
       can :manage, Question, :user_id => user.id
     else
-      # Guest user are not allowed
+      can :read, Question
     end
   end
 end

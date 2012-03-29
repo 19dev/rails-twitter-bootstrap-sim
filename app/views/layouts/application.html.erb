@@ -35,6 +35,17 @@
       <div class="span3">
         <h2>LSIM Nedir?</h2>
         LSIM (Lightening SIMulator)'un kısaltmasıdır.
+  <p>
+    <% if @current_user  %>
+      Hoşgeldin <b><%= @current_user.username %></b> |
+      <%= link_to "Çıkış", logout_url %>
+    <% else %>
+      Giriş yapmamışsınız |
+      <%= link_to "Giriş yap", login_url %>
+    <% end %>
+  </p>
+
+
       </div>
     </div>
   </div>
