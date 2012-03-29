@@ -5,6 +5,7 @@ gem 'rails', '3.2.2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'cancan'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

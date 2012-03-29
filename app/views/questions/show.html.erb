@@ -5,6 +5,10 @@
     <td><%= @question.title %></td>
   </tr>
   <tr>
+    <td>Username</td>
+    <td><%= @question.user.username %></td>
+  </tr>
+  <tr>
     <td>Qtype</td>
     <td><%= @question.qtype %></td>
   </tr>
@@ -31,6 +35,10 @@
 
 <div class="form-actions">
   <%= link_to 'Back', questions_path, :class => 'btn'  %>
-  <%= link_to 'Edit', edit_question_path(@question), :class => 'btn' %>
-  <%= link_to 'Delete', question_path(@question), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+  <% if can? :edit, @question %>
+    <%= link_to 'Edit', edit_question_path(@question), :class => 'btn' %>
+  <% end %>
+  <% if can? :destroy, @question %>
+    <%= link_to 'Delete', question_path(@question), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+  <% end %>
 </div>
